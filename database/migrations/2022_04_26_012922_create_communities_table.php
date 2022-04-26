@@ -14,12 +14,12 @@ class CreateCommunitiesTable extends Migration
     public function up()
     {
        Schema::create('communities', function (Blueprint $table) {
-        $table->bigIncrements('id');
+            $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->unique();
             $table->string('name');
-            $table->string('game');
-            $table->string('paticipation');
-            $table->string('authority');
+            $table->string('genre');
+            $table->integer('participation');
+            $table->integer('authority');
             $table->text('content');
             $table->string('image');
             $table->timestamps();
